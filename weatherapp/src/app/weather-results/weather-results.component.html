@@ -4,6 +4,7 @@
         <button class="search-button" (click)="sendLocation()">Pesquisar</button>
     </div>
     <div class='weather'>
-        <p></p>
+        <p *ngIf="weatherData">Temperatura: {{ weatherData.main.temp }}°C</p>
+        <p *ngIf="weatherData">Humidade: {{ weatherData.main.humidity }}%</p>
     </div>
 </div>

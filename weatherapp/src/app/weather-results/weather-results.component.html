@@ -1,10 +1,26 @@
 <div class="main-container">
     <div class="filter-container">
-        <input type="text" [(ngModel)]="locationInput">
+        <input class="search-bar" type="text" [(ngModel)]="locationInput">
         <button class="search-button" (click)="sendLocation()">Pesquisar</button>
     </div>
     <div class='weather'>
-        <p *ngIf="weatherData">Temperatura: {{ weatherData.main.temp }}°C</p>
-        <p *ngIf="weatherData">Humidade: {{ weatherData.main.humidity }}%</p>
+        <div class="column">
+            <div class="temperature">
+                <p>{{ weatherData.weather[0].description }}</p>
+                <p>{{ weatherData.main.temp }}°C</p>
+            </div>
+            <div class="info-grid-2">
+                <p>Visibilidade: {{ weatherData.visibility }} metros</p>
+                <p>Vento: Velocidade {{ weatherData.wind.speed }} m/s, Direção {{ weatherData.wind.deg }}°</p>
+                <p>Nuvens: {{ weatherData.clouds.all }}%</p>
+            </div>
+        </div>
+        <div class="info-grid-1">
+            <p>Umidade: {{ weatherData.main.humidity }}%</p>
+            <p>Temperatura Mínima: {{ weatherData.main.temp_min }}°C</p>
+            <p>Temperatura Máxima: {{ weatherData.main.temp_max }}°C</p>
+            <p>Sensação Térmica: {{ weatherData.main.feels_like }}°C</p>
+        </div>
+
     </div>
 </div>

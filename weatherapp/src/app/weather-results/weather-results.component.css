@@ -1,0 +1,82 @@
+.weather,
+.temperature,
+.filter-container,
+.info-grid-2
+ {
+    border: 1px solid red;
+
+}
+
+.info-grid-1 {
+    border: 1px solid rgb(89, 0, 255);
+
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    gap: 10px;
+
+}
+
+.search-bar {
+    height: 22px;
+    border-radius: 20px;
+    border: none;
+    border: 2px solid #b8b5b5;
+
+}
+
+.search-button {
+    height: 28px;
+    border-radius: 20px;
+    border: none;
+    border: 2px solid #b8b5b5;
+
+}
+
+.weather {
+    display: flex;
+    height: 525px;
+    
+
+}
+
+.temperature {
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 245px;
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.info-grid-2 {
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 245px;
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.info-grid-1 {
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}

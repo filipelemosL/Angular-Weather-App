@@ -1,14 +1,15 @@
 .weather,
 .temperature,
 .filter-container,
-.info-grid-2
+.info-grid-2,
+.weather-icon
  {
-    border: 1px solid red;
+    border: 1px solid rgba(255, 0, 0, 0);
 
 }
 
 .info-grid-1 {
-    border: 1px solid rgb(89, 0, 255);
+    border: 1px solid rgba(89, 0, 255, 0);
 
 }
 
@@ -58,7 +59,16 @@
     margin-top: 10px;
     border-radius: 20px;
     background-color: #ffffff2a;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #ffffff;
     
+}
+
+.weather-icon {
+    height: 100px;
+    width: 100px;
 }
 
 .info-grid-2 {
@@ -87,3 +97,26 @@
     border-radius: 20px;
     background-color: #ffffff2a;
 }
+
+.temperature, .info-grid-1, .info-grid-2 {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -4,19 +4,61 @@
         <button class="search-button" (click)="sendLocation()">Pesquisar</button>
     </div>
     <div class='weather'>
-        <div class="column">
+        <div *ngIf="weatherData" class="column">
             <div class="temperature">
-                <img *ngIf="">
-                <p>{{ weatherData.weather[0].description }}</p>
+                <ng-container *ngIf="weatherData.weather[0].description === 'clear sky'">
+                    <img class ='weather-icon' src='../../assets/clear-sky.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'broken clouds'">
+                    <img src='../../assets/broken-clouds.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'few clouds'">
+                    <img  class ='weather-icon' src='../../assets/few-clouds.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'mist'">
+                    <img  class ='weather-icon' src='../../assets/mist.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'overcast clouds'">
+                    <img  class ='weather-icon' src='../../assets/overcast-clods.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'rain'">
+                    <img  class ='weather-icon' src='../../assets/rain.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'scattered clouds'">
+                    <img  class ='weather-icon' src='../../assets/scattered-clouds.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'shower rain'">
+                    <img  class ='weather-icon' src='../../assets/shower-rain.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'moderate rain'">
+                    <img  class ='weather-icon' src='../../assets/shower-rain.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'snow'">
+                    <img  class ='weather-icon' src='../../assets/snow.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'thunderstorm'">
+                    <img  class ='weather-icon' src='../../assets/thunderstorm.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'snow'">
+                    <img  class ='weather-icon' src='../../assets/snow.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'light snow'">
+                    <img  class ='weather-icon' src='../../assets/snow.png'>
+                  </ng-container>
+                  <ng-container *ngIf="weatherData.weather[0].description === 'heavy snow'">
+                    <img  class ='weather-icon' src='../../assets/snow.png'>
+                  </ng-container>
+
+
                 <p>{{ weatherData.main.temp }}°C</p>
             </div>
-            <div class="info-grid-2">
+            <div  class="info-grid-2">
                 <p>Visibilidade: {{ weatherData.visibility }} metros</p>
                 <p>Vento: Velocidade {{ weatherData.wind.speed }} m/s, Direção {{ weatherData.wind.deg }}°</p>
                 <p>Nuvens: {{ weatherData.clouds.all }}%</p>
             </div>
         </div>
-        <div class="info-grid-1">
+        <div *ngIf="weatherData" class="info-grid-1">
             <p>Umidade: {{ weatherData.main.humidity }}%</p>
             <p>Temperatura Mínima: {{ weatherData.main.temp_min }}°C</p>
             <p>Temperatura Máxima: {{ weatherData.main.temp_max }}°C</p>

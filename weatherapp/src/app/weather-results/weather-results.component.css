@@ -8,7 +8,7 @@
 
 }
 
-.info-grid-1 {
+.weather {
     border: 1px solid rgba(89, 0, 255, 0);
 
 }
@@ -43,6 +43,7 @@
 
 .weather {
     display: flex;
+    justify-content: center;
     height: 525px;
     
 
@@ -87,8 +88,8 @@
 .info-grid-1 {
     display:flex; 
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    gap: 60px;
     height: 500px;
     width: 180px;
     margin-left: 10px;
@@ -96,6 +97,18 @@
     margin-top: 10px;
     border-radius: 20px;
     background-color: #ffffff2a;
+}
+
+.info {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-left: 10px;
+  color:#ffffff;
+}
+
+.info-cell {
+  border: 1px solid rgba(255, 0, 0, 0);
+  width: 150px;
 }
 
 .temperature, .info-grid-1, .info-grid-2 {

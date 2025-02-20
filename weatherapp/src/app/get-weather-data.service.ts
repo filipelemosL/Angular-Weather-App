@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 export class GetWeatherDataService {
 
   constructor(private http: HttpClient) { }
-
+ // ESSA FUNÇÂO PEGA OS DADOS METEOROLOGICOS DA API
   getWeatherData(latitude: number, longitude: number, apiKey: string): Observable<any> {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
     return this.http.get(apiUrl);
